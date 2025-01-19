@@ -4,7 +4,9 @@ author: "Elaine Chu"
 date: "2025-01-18"
 ---
 
-Imagine you are a master chef who just developed the best recipe for chicken adobo. You can’t wait to share this recipe with the rest of the world so they can recreate the dish themselves. How would you go about ensuring others can replicate the dish exactly as you did? Would just providing the recipe be enough? Different kitchens may have different cookware available, and ingredients may differ slightly depending on the country. So just providing the recipe itself may not suffice.
+Imagine you are a master chef who just developed the best recipe for chicken adobo. You can’t wait to share this recipe with the rest of the world so they can recreate the dish themselves. How would you go about ensuring others can replicate the dish exactly as you did? Would just providing the recipe be enough? Different kitchens may have different cookware available, and ingredients may differ slightly depending on the country. So just providing the recipe itself may not suffice. 
+
+![Fig 1. The moment you found the best chicken adobo recipe](chef.gif){fig-width=10}
 
 This is a similar question that is faced by data scientists after they created a model and want to share the results of their analysis with others. In data analysis, reproducibility is a cornerstone of credible and reliable work. It ensures others can recreate an analysis and verify its results, fostering trust in the insights derived from the data. However, to achieve this, just providing the code of the analysis is insufficient. We often need to ensure that the differences in computer environments are also addressed so that the analysis can run other computers without any issue. We want to not only have the code for analysis to be reproducible, but the entire computational environment to also be reproducible. There are several tools such as `environment.yaml` files, conda lock files, and docker containers that can help us do exactly that. Each of these tools offers a different level of precision and isolation, much like providing varying degrees of guidance to recreate a dish by a chef. Now let’s explore each of them in detail!
 
@@ -13,6 +15,8 @@ This is a similar question that is faced by data scientists after they created a
 One way to reproduce a computational environment is by using an `environment.yaml` file. Computers can create a virtual environment in their system. Virtual environment is an isolated workspace that allows us to manage and run specific packages and programs without affecting the global environment of the computer. An `environment.yaml` file will provide instructions to create a new virtual environment with the specific packages needed to reproduce the analysis listed. 
 
 This is like the chef sharing the recipe along with a list of ingredients to others. It provides essentials on what is needed to recreate the dish, but it also assumes other people can source the ingredients and figure out the appropriate cookware for it. Similarly, although `environment.yaml` files lists the necessary  packages, it does not specify the exact version or provide information on what dependents those packages may have. Every time someone install an environment using the `environment.yaml` file, it needs to run a solver to figure out which version of the package to install and what are the dependent packages it needs. This could introduce variability and inefficiencies. Is there a way we can overcome this? Enter conda lock files…
+
+![Fig 2. What other materials are needed to cook the recipe](whatelse.gif){fig-width=5}
 
 ### Conda Lock Files: A Precise shopping list
 
@@ -27,6 +31,7 @@ Both `environment.yaml` files and conda lock files create virtual environments, 
 Instead of just creating a virtual environment, docker creates a containerized environment. Essentially, it splits up the resource in a computer system itself so it can run in complete isolation. Examples of elements it splits on could be storage devices, network resources, and other hardware capacities. The container will include not only the necessary programming language and packages, but also the operating system and system-level dependencies required for the analysis.
 
 Back to the analogy of the chef, this is like providing a fully equipped and pre-stocked kitchen. All the ingredients and tools you need to make the dish are there without needing to assemble or install anything else. This level of completeness ensures the analysis can be reproduced without any issue. However, docker containers require more expertise to set up and manage, they are heavier and more resource intensive. 
+![Fig 3. A fully stocked kitchen just for you to make chicken adobo](kitchencontainer.png){fig-width=5}
 
 ### Choosing the right tool
 
