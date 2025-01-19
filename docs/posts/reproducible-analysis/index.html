@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Elaine Chu">
+<meta name="dcterms.date" content="2025-01-18">
 
-<title>blog</title>
+<title>Reproducibility in Data Analysis: A Comparative Perspective on Virtual Environments and Containers – blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +68,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">blog</span>
     </a>
   </div>
@@ -149,7 +91,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,144 +114,70 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">blog</h1>
+    <div class="quarto-title column-body">
+      <h1 class="title">Reproducibility in Data Analysis: A Comparative Perspective on Virtual Environments and Containers</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Elaine Chu </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 18, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>Imagine you are a master chef who just developed the best recipe for chicken adobo. You can’t wait to share this recipe with the rest of the world so they can recreate the dish themselves. How would you go about ensuring others can replicate the dish exactly as you did? Would just providing the recipe be enough? Different kitchens may have different cookware available, and ingredients may differ slightly depending on the country. So just providing the recipe itself may not suffice.</p>
+<p>This is a similar question that is faced by data scientists after they created a model and want to share the results of their analysis with others. In data analysis, reproducibility is a cornerstone of credible and reliable work. It ensures others can recreate an analysis and verify its results, fostering trust in the insights derived from the data. However, to achieve this, just providing the code of the analysis is insufficient. We often need to ensure that the differences in computer environments are also addressed so that the analysis can run other computers without any issue. We want to not only have the code for analysis to be reproducible, but the entire computational environment to also be reproducible. There are several tools such as <code>environment.yaml</code> files, conda lock files, and docker containers that can help us do exactly that. Each of these tools offers a different level of precision and isolation, much like providing varying degrees of guidance to recreate a dish by a chef. Now let’s explore each of them in detail!</p>
+<section id="environment.yaml-files-the-recipe-and-ingredients" class="level3">
+<h3 class="anchored" data-anchor-id="environment.yaml-files-the-recipe-and-ingredients">Environment.yaml Files: The recipe and ingredients</h3>
+<p>One way to reproduce a computational environment is by using an <code>environment.yaml</code> file. Computers can create a virtual environment in their system. Virtual environment is an isolated workspace that allows us to manage and run specific packages and programs without affecting the global environment of the computer. An <code>environment.yaml</code> file will provide instructions to create a new virtual environment with the specific packages needed to reproduce the analysis listed.</p>
+<p>This is like the chef sharing the recipe along with a list of ingredients to others. It provides essentials on what is needed to recreate the dish, but it also assumes other people can source the ingredients and figure out the appropriate cookware for it. Similarly, although <code>environment.yaml</code> files lists the necessary packages, it does not specify the exact version or provide information on what dependents those packages may have. Every time someone install an environment using the <code>environment.yaml</code> file, it needs to run a solver to figure out which version of the package to install and what are the dependent packages it needs. This could introduce variability and inefficiencies. Is there a way we can overcome this? Enter conda lock files…</p>
+</section>
+<section id="conda-lock-files-a-precise-shopping-list" class="level3">
+<h3 class="anchored" data-anchor-id="conda-lock-files-a-precise-shopping-list">Conda Lock Files: A Precise shopping list</h3>
+<p>Conda lock files are similar to <code>environment.yaml</code> files where it gives instructions on how to create a new virtual environment. However, it also includes detailed information on the specific versions of the packages and all the dependent packages are needed. This eliminates the need to run a solver every time someone installs the environment using the conda lock file. This ensures the environment is recreated exactly as specified, ensuring consistency and reducing setup time.</p>
+<p>This is similar to the chef giving a precise shopping list of ingredients with the specific brands, quantities, and version listed along with cookware requirements. This minimizes variability and ensures others can recreate the dish as exactly as intended. The added precision does, however, make the conda lock files more complex to create and use when compared to an <code>environment.yaml</code> file.</p>
+<p>Both <code>environment.yaml</code> files and conda lock files create virtual environments, however, sometimes just a virtual environment is not enough. Outside of the programming language and packages used in the analysis, there could be other computer specifications like operating systems or hardware configurations that are needed for the analysis to run. How do we go one step further and address these differences? We can use docker containers…</p>
+</section>
+<section id="docker-containers-a-fully-equipped-kitchen" class="level3">
+<h3 class="anchored" data-anchor-id="docker-containers-a-fully-equipped-kitchen">Docker Containers: A Fully Equipped Kitchen</h3>
+<p>Instead of just creating a virtual environment, docker creates a containerized environment. Essentially, it splits up the resource in a computer system itself so it can run in complete isolation. Examples of elements it splits on could be storage devices, network resources, and other hardware capacities. The container will include not only the necessary programming language and packages, but also the operating system and system-level dependencies required for the analysis.</p>
+<p>Back to the analogy of the chef, this is like providing a fully equipped and pre-stocked kitchen. All the ingredients and tools you need to make the dish are there without needing to assemble or install anything else. This level of completeness ensures the analysis can be reproduced without any issue. However, docker containers require more expertise to set up and manage, they are heavier and more resource intensive.</p>
+</section>
+<section id="choosing-the-right-tool" class="level3">
+<h3 class="anchored" data-anchor-id="choosing-the-right-tool">Choosing the right tool</h3>
+<p>The choice between <code>environment.yaml</code> files, conda lock files, and Docker containers really depends on the specific requirements of the data analysis project at hand. If it is a project where minor variations in package versions do not matter, then <code>environment.yaml</code> files may be ideal. It is simple and easy to create and share. If we want to have a stricter requirement for package version and dependencies, then conda lock files will be our choice. Although slightly more complex than <code>environment.yaml</code> files, they are ideal for projects that require precise reproducibility. Finally, if we want a fully self-contained and portable solution for long-term reproducibility for complex projects, docker containers may be the tool we need. They will require more resources and expertise to use, however, they also offer the highest level of reproducibility and isolation.</p>
+<p>By understanding the trade-offs between these different tools allows data scientists to choose the right tool for their project’s needs. Whether it is sharing a recipe, a precise shopping list, or a full equipped kitchen, each approach offers a unique pathway to reproducible and reliable analysis.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news,code,analysis" data-listing-date-sort="1737187200000" data-listing-file-modified-sort="1737232214146" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/index.html" class="no-external"></a></p><a href="./posts/post-with-code/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/post-with-code/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/index.html" class="no-external">This is a post with executable code.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/index.html" class="no-external">
-<div class="listing-date">
-Jan 18, 2025
-</div>
-<div class="listing-author">
-Harlow Malloc
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1737187200000" data-listing-file-modified-sort="1737248847794" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="977">
-<div class="thumbnail">
-<p><a href="./posts/reproducible-analysis/index.html" class="no-external"></a></p><a href="./posts/reproducible-analysis/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/reproducible-analysis/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/reproducible-analysis/index.html" class="no-external">Reproducibility in Data Analysis: A Comparative Perspective on Virtual Environments and Containers</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/reproducible-analysis/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/reproducible-analysis/index.html" class="no-external">Imagine you are a master chef who just developed the best recipe for chicken adobo. You can’t wait to share this recipe with the rest of the world so they can recreate the…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/reproducible-analysis/index.html" class="no-external">
-<div class="listing-date">
-Jan 18, 2025
-</div>
-<div class="listing-author">
-Elaine Chu
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="news" data-listing-date-sort="1736928000000" data-listing-file-modified-sort="1737232214141" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p class="card-img-top"><img src="posts\welcome\thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">This is the first post in a Quarto blog. Welcome!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Jan 15, 2025
-</div>
-<div class="listing-author">
-Tristan O’Malley
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
